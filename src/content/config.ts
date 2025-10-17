@@ -17,7 +17,6 @@ export const collections = {
       description: z.string(),
       image: z.string(),
       imageAlt: z.string(),
-      href: z.string(),
     }),
   }),
 

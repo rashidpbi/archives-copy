@@ -4,10 +4,10 @@ interface Props {
   description: string;
   image: string;
   imageAlt: string;
-  href: string;
+  slug: string;
 }
 
-const { title, description, image, imageAlt, href} = Astro.props;
+const { title, description, image, imageAlt, slug} = Astro.props;
 ---
 
 
@@ -17,7 +17,7 @@ const { title, description, image, imageAlt, href} = Astro.props;
       class="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
     >
     
-      <a href={href} class="block">
+      <a href={`/blogs/${slug}`}  class="block">
         <!-- Image Container -->
         <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-b from-black/60 to-black/80">
           <img
