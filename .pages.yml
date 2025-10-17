@@ -1,4 +1,7 @@
-media: files
+media:
+  input: files/media    
+  output: public/media  
+
 content: 
    - name: blogs
      label: Blogs
