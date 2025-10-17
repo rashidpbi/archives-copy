@@ -1,6 +1,4 @@
-media:
-  input: files/media    
-  output: public/media  
+media: public/media
 
 content: 
    - name: blogs
