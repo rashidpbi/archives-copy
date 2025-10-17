@@ -1,0 +1,86 @@
+---
+// Header.astro - Main navigation header
+---
+
+<header class="sticky top-0 z-50 bg-[#f5e6d3] border-b border-[#d4c5b0]">
+  <nav class="container mx-auto px-4 py-3" aria-label="Main navigation">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="Top Lusi Home">
+        <img src="/logo.png" alt="Top Lusi" class="h-10 w-auto" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+        <li><a href="/" class="hover:text-[#8b4513] transition-colors">HOME</a></li>
+        <li><a href="/interviews" class="text-[#8b4513] font-semibold" aria-current="page">INTERVIEWS</a></li>
+        <li><a href="/speeches" class="hover:text-[#8b4513] transition-colors">SPEECHES</a></li>
+        <li><a href="/podcast" class="hover:text-[#8b4513] transition-colors">PODCAST</a></li>
+        <li><a href="/old-advertisement" class="hover:text-[#8b4513] transition-colors">OLD ADVERTISEMENT</a></li>
+        <li><a href="/movies" class="hover:text-[#8b4513] transition-colors">MOVIES</a></li>
+        <li><a href="/news" class="hover:text-[#8b4513] transition-colors">NEWS</a></li>
+        <li><a href="/music" class="hover:text-[#8b4513] transition-colors">MUSIC</a></li>
+        <li><a href="/blogs" class="hover:text-[#8b4513] transition-colors">BLOGS</a></li>
+        <li><a href="/about" class="hover:text-[#8b4513] transition-colors">ABOUT</a></li>
+        <li><a href="/contact" class="hover:text-[#8b4513] transition-colors">CONTACT</a></li>
+      </ul>
+
+      <!-- Right Side Icons -->
+      <div class="flex items-center space-x-4">
+        <button 
+          type="button"
+          class="p-2 hover:bg-[#e6d7c3] rounded-full transition-colors"
+          aria-label="Search"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </button>
+        
+        <button 
+          type="button"
+          class="lg:hidden p-2 hover:bg-[#e6d7c3] rounded-full transition-colors"
+          aria-label="Open menu"
+          id="mobile-menu-button"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div 
+      id="mobile-menu" 
+      class="lg:hidden hidden mt-4 pb-4"
+      role="dialog"
+      aria-label="Mobile menu"
+    >
+      <ul class="space-y-2">
+        <li><a href="/" class="block py-2 hover:text-[#8b4513] transition-colors">HOME</a></li>
+        <li><a href="/interviews" class="block py-2 text-[#8b4513] font-semibold" aria-current="page">INTERVIEWS</a></li>
+        <li><a href="/speeches" class="block py-2 hover:text-[#8b4513] transition-colors">SPEECHES</a></li>
+        <li><a href="/podcast" class="block py-2 hover:text-[#8b4513] transition-colors">PODCAST</a></li>
+        <li><a href="/old-advertisement" class="block py-2 hover:text-[#8b4513] transition-colors">OLD ADVERTISEMENT</a></li>
+        <li><a href="/movies" class="block py-2 hover:text-[#8b4513] transition-colors">MOVIES</a></li>
+        <li><a href="/news" class="block py-2 hover:text-[#8b4513] transition-colors">NEWS</a></li>
+        <li><a href="/music" class="block py-2 hover:text-[#8b4513] transition-colors">MUSIC</a></li>
+        <li><a href="/blogs" class="block py-2 hover:text-[#8b4513] transition-colors">BLOGS</a></li>
+        <li><a href="/about" class="block py-2 hover:text-[#8b4513] transition-colors">ABOUT</a></li>
+        <li><a href="/contact" class="block py-2 hover:text-[#8b4513] transition-colors">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    const isExpanded = !mobileMenu?.classList.contains('hidden');
+    menuButton.setAttribute('aria-expanded', isExpanded.toString());
+  });
+</script>

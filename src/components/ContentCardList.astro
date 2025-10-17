@@ -1,0 +1,18 @@
+---
+// ContentCardList.astro - Grid layout for interview cards
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<section 
+  class={`container mx-auto px-4 py-8 sm:py-12 ${className || ''}`}
+  aria-label="Interview list"
+>
+  <!-- Grid: 1 column on mobile, 2 on tablet, 3 on desktop -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <slot />
+  </div>
+</section>

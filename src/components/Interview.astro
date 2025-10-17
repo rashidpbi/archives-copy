@@ -1,0 +1,30 @@
+---
+// interviews.astro - Complete interviews page
+import Header from "../components/Header.astro";
+// import PageHero from '../components/PageHero.astro';
+import ContentCardList from "../components/ContentCardList.astro";
+import ContentCard from "../components/ContentCard.astro";
+import { getCollection } from "astro:content";
+
+// Sample data - replace with your actual data source
+const interviews = await getCollection("interviews");
+// console.log("inteviews: ",interviews)
+---
+
+<div>
+  <ContentCardList>
+    {
+      interviews.map((interview) => {
+        return (
+          <ContentCard
+            title={interview.data.title}
+            description={interview.data.description}
+            image={interview.data.image}
+            imageAlt={interview.data.imageAlt}
+            href={interview.data.href}
+          />
+        );
+      })
+    }
+  </ContentCardList>
+</div>

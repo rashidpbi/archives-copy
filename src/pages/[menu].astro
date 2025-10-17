@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro"
+import '../styles/global.css'
+import menus from '../collection/menu.json'
+export async function getStaticPaths() {
+    return menus.map(menu =>{
+        return ({params:{menu:menu.title}})
+    })
+    
+//   return [{ params: { menu: "1" } }, { params: { menu: "2" } }];
+}
+
+const {menu} = Astro.params
+console.log("menus: ",menus)
+---
+<!-- <h1>{menu}</h1> -->
+<Layout title={menu}>
+<div>
+
+</div>
+    <h1>{menu}</h1>
+</Layout>

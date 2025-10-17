@@ -1,0 +1,10 @@
+[
+  { "title": "speeches", "href": "/speeches" },
+  { "title": "podcast", "href": "/podcast" },
+  { "title": "old-advertisement", "href": "/old-advertisement" },
+  { "title": "movies", "href": "/movies" },
+  { "title": "news", "href": "/news" },
+  { "title": "music", "href": "/music" },
+  { "title": "about", "href": "/about" },
+  { "title": "contact", "href": "/contact" }
+]
