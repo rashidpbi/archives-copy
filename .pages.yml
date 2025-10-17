@@ -1,1 +1,10 @@
-media: files       
+media: files
+content: 
+   - name: blogs
+     label: Blogs
+     path: src/content/blogs
+     type: collection
+     fields: 
+      - {name: "title", label: "Title", type: "string"}
+      - {name: "description", label: "Description", type: "string"}
+     
