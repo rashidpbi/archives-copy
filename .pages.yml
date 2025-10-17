@@ -10,7 +10,7 @@ content:
      fields: 
       - {name: "title", label: "Title", type: "string"}
       - {name: "description", label: "Description", type: "string"}
-      - {name: "image", label: "Image", type: "string"}
+      - {name: "image", label: "Image", type: "image"}
       - {name: "imageAlt", label: "ImageAlt", type: "string"}
       - {name: "href", label: "Href", type: "string"}
      
